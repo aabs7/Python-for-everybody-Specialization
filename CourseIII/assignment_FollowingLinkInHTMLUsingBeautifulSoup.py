@@ -10,8 +10,6 @@ data_url = "http://py4e-data.dr-chuck.net/known_by_Chu.html"
 repetition = 7
 linkPosition = 18
 ##
-allLinks = list()
-allNames = list()
 
 for i in range(repetition):
 	html = urllib.request.urlopen(data_url).read()
