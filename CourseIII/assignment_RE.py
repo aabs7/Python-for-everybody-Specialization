@@ -18,7 +18,7 @@ for line in fHandle:
 			count = count + 1
 			ts = ts + int(num)
 
-print(ts)
+print("There are",count,"values with a sum=",ts)
 
 
 
