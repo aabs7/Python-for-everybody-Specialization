@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 
 sample_url = "http://python-data.dr-chuck.net/comments_42.html"
-data_url = "http://python-data.dr-chuck.net/comments_277464.html"
+data_url = "http://py4e-data.dr-chuck.net/comments_169959.html"
 
 html = urllib.request.urlopen(data_url).read()
 soup = BeautifulSoup(html,"html.parser")
