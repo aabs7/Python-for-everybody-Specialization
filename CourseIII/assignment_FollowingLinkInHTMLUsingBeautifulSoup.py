@@ -16,12 +16,14 @@ allNames = list()
 for i in range(repetition):
 	html = urllib.request.urlopen(data_url).read()
 	soup = BeautifulSoup(html,"html.parser")
-	tags = soup('a')
-	for tag in tags:
-		urls = tag.get('href',None)
-		allLinks.append(urls)
-		names = tag.text
-		allNames.append(names)
+	tags = soup.find_all('a')
 
-	print(allLinks[linkPosition-1])
-	print(allNames[linkPosition-1])
+	#find the link at linkPosition
+	positionLink = tags[linkPosition-1]
+
+	next_data_url = positionLink.get('href',None)
+
+	#next url is opening the url which is at linkPosition
+	data_url = next_data_url
+	print(next_data_url)
+
