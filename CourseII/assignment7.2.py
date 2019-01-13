@@ -10,15 +10,15 @@
 file = input("Enter the file name:")
 fHandle = open(file)
 count = 0
-sum = 0
+ts = 0
 
 for line in fHandle:
 	if not line.startswith("X-DSPAM-Confidence:"): continue
 	pos = line.find("0")
-	sum += float(line[pos:])
+	ts += float(line[pos:])
 	count += 1
 
-average = sum / count
+average = ts / count
 print("Average spam confidence = ",average)
 
 
