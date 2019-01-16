@@ -1,0 +1,33 @@
+1.Creating a table
+
+	CREATE TABLE Users(
+		name VARCHAR(128),
+		email VARCHAR(128)
+	)
+
+2.Inserting data
+
+	INSERT INTO Users(name,email) VALUES ('name','emailID')
+
+3.Deleting data
+
+	DELETE FROM Users WHERE email ='emailID'
+
+4.Updating data
+
+	UPDATE Users SET name='name' WHERE email = 'emailID'
+
+5.Retrieving Records: Select
+	* refers to column - here * means all column
+
+	SELECT * FROM Users
+	SELECT * FROM Users WHERE email='emailID'
+
+6. Sorting with ORDER BY
+	you can add an ORDER BY clause to SELECT statements to get the results in 
+	ascending or descending order
+
+	SELECT * FROM Users ORDER BY email
+	SELECT * FROM Users ORDER BY name
+
+
